@@ -1,0 +1,15 @@
+:root{
+    --text: white;
+    --bg: black;
+
+    --optext: rgba(255, 255, 255, 0.7);
+    --opbg: rgba(29, 14, 96, 0.5);
+
+    --navtext: #F8FAFC;
+    --navicon: #94a3b8;
+    --navbg: #0B1428;
+    --navborder: #251e3b;
+
+    --navactive: #06B6D4;
+    --navactivebg:  #10283b;
+}
