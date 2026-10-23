@@ -8,6 +8,22 @@
 html{
     scroll-behavior: smooth;
     scroll-snap-type: y proximity;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+
+html,
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100%;
 }
 
 main{
@@ -68,13 +84,6 @@ main{
     color: var(--navactive);
     border-color: var(--navactive);
     transform: translateX(-3px);
-}
-
-/* Ikon yang sedang aktif */
-.nav-iconkelompok3.active {
-    color: var(--navactive);
-    background: var(--navactivebg);
-    border-color: var(--navactive);
 }
 
 .tooltipkelompok3 {
@@ -239,12 +248,36 @@ img.ickelompok3{
     width: 254px;
     height: 274px;
     margin-bottom: 20px;
+    filter: brightness(40%);
+    transition: filter 0.4s ease, 
+            transform 0.4s ease;
+}
+
+img.ickelompok3:hover{
+    filter:brightness(100%);
+
+    transform: perspective(1000px)
+            rotateY(15deg)
+            rotateX(10deg)
+            scale(1.05);
 }
 
 img.dckelompok3{
     height: 40%;
     position: relative;
-    bottom: -20%;    
+    bottom: -20%;
+    filter: brightness(40%);
+    transition: filter 0.4s ease, 
+            transform 0.4s ease;
+}
+
+img.dckelompok3:hover{
+        filter:brightness(100%);
+
+        transform: perspective(1000px)
+            rotateY(15deg)
+            rotateX(10deg)
+            scale(1.05);
 }
 
 @media (prefers-reduced-motion: reduce) {

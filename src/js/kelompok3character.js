@@ -17,18 +17,18 @@ document.addEventListener("mousemove", (event) => {
 
 const sprites = {
   idle: {
-    up: "./etc/img/hatsu/idleb.gif",
-    down: "./etc/img/hatsu/idlef.gif",
-    left: "./etc/img/hatsu/idlel.gif",
-    right: "./etc/img/hatsu/idler.gif"
+    up: "./src/img/hatsu/idleb.gif",
+    down: "./src/img/hatsu/idlef.gif",
+    left: "./src/img/hatsu/idlel.gif",
+    right: "./src/img/hatsu/idler.gif"
   },
   run: {
-    up: "./etc/img/hatsu/runb.gif",
-    down: "./etc/img/hatsu/runf.gif",
-    left: "./etc/img/hatsu/runl.gif",
-    right: "./etc/img/hatsu/runr.gif"
+    up: "./src/img/hatsu/runb.gif",
+    down: "./src/img/hatsu/runf.gif",
+    left: "./src/img/hatsu/runl.gif",
+    right: "./src/img/hatsu/runr.gif"
   },
-  click: "./etc/img/hatsu/click.gif"
+  click: "./src/img/hatsu/click.gif"
 };
 
 let posX = window.innerWidth / 2;
@@ -127,12 +127,12 @@ function updatePosition() {
 const interactHint = document.getElementById("interact-hint");
 
 
-function getCharacterRect() {
+function gsrcharacterRect() {
   return pixelCharacter.getBoundingClientRect();
 }
 
 function isNearElement(element) {
-  const char = getCharacterRect();
+  const char = gsrcharacterRect();
   const target = element.getBoundingClientRect();
 
   const charX = char.left + char.width / 2;
